@@ -13,6 +13,9 @@ exports.obtenerPorId = async (req, res) => {
 
 exports.crear = async (req, res) => {
   try {
+    if (!nombre || !nombre.trim() || !email || !email.trim() || !telefono || !telefono.trim()) {
+      return res.render('formulario', { mensaje: "Todos los campos son obligatorios." });
+    }
     let cliente_nuevo = {
       nombre : req.body.nombre,
       email :req.body.email,

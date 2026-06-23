@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <div class="container mt-3">
+  <h2>Crear Servicio</h2>
+  <form action="/servicio" method="POST">
+    <div class="mb-3 mt-3">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Nombre del Servicio" name="nombre">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="email">Descripcion:</label>
+      <input type="text" class="form-control" id="descripcion" placeholder="Digite descripcion" name="descripcion">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="tel">Duracion:</label>
+      <input type="number" class="form-control" id="duracion" placeholder="Digite duracion" name="duracion">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="tel">Precio:</label>
+      <input type="number" class="form-control" id="precio" placeholder="Digite precio" name="precio">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="tel">Categoria:</label>
+      <input type="number" class="form-control" id="categoria" placeholder="Digite categoria" name="categoria">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="tel">Imagen:</label>
+      <input type="number" class="form-control" id="imagen" placeholder="Digite imagen" name="imagen">
+    </div>
+    
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Recordarme Siempre
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+    
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>

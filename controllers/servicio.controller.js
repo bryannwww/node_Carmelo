@@ -29,3 +29,7 @@ exports.eliminar = async (req, res) => {
   await Servicio.findByIdAndDelete(req.params.id);
   res.json({ mensaje: "Servicio eliminado" });
 };
+
+exports.formulario = async(req,res) => {
+  res.render('pages/registrar_servicios')
+}

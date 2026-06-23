@@ -5,15 +5,23 @@ require("dotenv").config();
 const express = require("express");
 
 const conexion = require("./config/connectiondb");
+const enruta = require('./router/clientes.router');
+const enruta2 = require('./router/producto.router');
+const enruta3 = require('./router/servicio.router');
 
-const clienteController = require("./controllers/cliente.controller");
-const productoController = require("./controllers/producto.controller");
-const servicioController = require("./controllers/servicio.controller");
+
 
 const app = express();
 
-app.use(express.json());
 app.set('view engine', 'ejs');
+app.use(express.json());
+
+app.use('/', enruta); 
+app.use('/api/clientes/', enruta);
+app.use('/api/productos/', enruta2); 
+app.use('/api/servicios/', enruta3);
+
+
 
 conexion
   .then(() => console.log("Conexion exitosa a MongoDB"))
@@ -22,30 +30,15 @@ conexion
 app.get('/', (req, res) => {
   res.render('pages/index.ejs');
 });
-app.get('', clienteController.home)
-app.get('/clientes', clienteController.consultar);
-app.get('/clientes/:id', clienteController.obtenerPorId);
-app.post('/clientes', clienteController.crear);
-app.put('/clientes/:id', clienteController.actualizar);
-app.delete('/clientes/:id', clienteController.eliminar);
 
-app.get('/productos', productoController.consultar);
-app.get('/productos/:id', productoController.obtenerPorId);
-app.post('/productos', productoController.crear);
-app.put('/productos/:id', productoController.actualizar);
-app.delete('/productos/:id', productoController.eliminar);
 
-app.get('/servicios', servicioController.consultar);
-app.get('/servicios/:id', servicioController.obtenerPorId);
-app.post('/servicios', servicioController.crear);
-app.put('/servicios/:id', servicioController.actualizar);
-app.delete('/servicios/:id', servicioController.eliminar);
+
 
 app.listen(8000, () => {
   console.log("Servidor corriendo en puerto 8000");
 });
 
-app.get('/formulario', clienteController.formulario);
+
 
 
 

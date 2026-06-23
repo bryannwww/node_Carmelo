@@ -1,26 +1,36 @@
-
 <div class="container mt-3">
   <h2>Aprendiz sena</h2>
   <ul class="nav nav-tabs">
+    <!-- Inicio -->
     <li class="nav-item">
       <a class="nav-link active" href="/">Inicio</a>
     </li>
+
+    <!-- Desplegable Servicios -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">PRUEBA</a>
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Servicios</a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/servicios">Servicios</a></li>
-        <li><a class="dropdown-item" href="/productos">Productos</a></li>
-        <li><a class="dropdown-item" href="/clientes">Clientes</a></li>
-      </ul>
-     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Clientes</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/clientes">LISTAR</a></li>
-        <li><a class="dropdown-item" href="/formulario">CREAR</a></li>
-        
-       
+        <li><a class="dropdown-item" href="/api/servicios/servicios">Listar Servicios</a></li>
+        <li><a class="dropdown-item" href="/api/servicios/formulario">Crear Servicio</a></li>
       </ul>
     </li>
-  
+
+    <!-- Desplegable Clientes -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Clientes</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/api/clientes/clientes">Listar Clientes</a></li>
+        <li><a class="dropdown-item" href="/api/clientes/formulario">Crear Cliente</a></li>
+      </ul>
+    </li>
+
+    <!-- Desplegable Productos -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Productos</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/api/productos/productos">Listar Productos</a></li>
+        <li><a class="dropdown-item" href="/api/productos/formulario">Crear Producto</a></li>
+      </ul>
+    </li>
   </ul>
 </div>

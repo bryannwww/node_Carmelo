@@ -29,3 +29,7 @@ exports.eliminar = async (req, res) => {
   await Producto.findByIdAndDelete(req.params.id);
   res.json({ mensaje: "Producto eliminado" });
 };
+
+exports.formulario = async(req,res) => {
+  res.render('pages/registrar_producto')
+}

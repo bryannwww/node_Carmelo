@@ -12,11 +12,12 @@
     <main>
         <div>
             <h1>Productos</h1>
-            <table id="tabla"> 
+            <table id="tabla" class="table table-striped">
                 <thead>
                     <th>Stock</th>
                     <th>Nombre</th>
                     <th>Precio</th>
+                    <th>Acciones</th>
                 </thead>
                 <tbody>
                     <% productos.forEach(function(producto) { %>
@@ -24,6 +25,10 @@
                             <td><%= producto.stock %></td>
                             <td><%= producto.nombre %></td>
                             <td><%= producto.precio %></td>
+                            <td>
+                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                                <a href="#" class="btn btn succ btn-info">Actualizar</a>
+                            </td>
                         </tr>
                     <% }); %>
                 </tbody>

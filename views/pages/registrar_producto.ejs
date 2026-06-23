@@ -9,19 +9,19 @@
         <%- include('../partials/header'); %>
     </header>
     <div class="container mt-3">
-  <h2>Crear Cliente</h2>
-  <form action="/clientes" method="POST">
+  <h2>Crear Producto</h2>
+  <form action="/producto" method="POST">
     <div class="mb-3 mt-3">
       <label for="nombre">Nombre:</label>
-      <input type="text" class="form-control" id="nombre" placeholder="Digite nombre" name="nombre" minlength="3" required>
+      <input type="text" class="form-control" id="nombre" placeholder="Nombre del Producto" name="nombre">
     </div>
     <div class="mb-3 mt-3">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Digite email" name="email" required>
+      <label for="email">Precio:</label>
+      <input type="number" class="form-control" id="precio" placeholder="Digite precio" name="precio">
     </div>
     <div class="mb-3 mt-3">
-      <label for="tel">Tel:</label>
-      <input type="number" class="form-control" id="tel" placeholder="Digite telefono" name="telefono" required minlength="10">
+      <label for="tel">Stock:</label>
+      <input type="number" class="form-control" id="stock" placeholder="Digite stock" name="stock">
     </div>
     
     <div class="form-check mb-3">
@@ -31,7 +31,6 @@
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
-  <script src="/js/validacion.js"></script>
 </div>
 
     
