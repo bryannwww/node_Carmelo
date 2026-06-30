@@ -26,8 +26,17 @@ exports.actualizar = async (req, res) => {
 };
 
 exports.eliminar = async (req, res) => {
-  await Servicio.findByIdAndDelete(req.params.id);
-  res.json({ mensaje: "Servicio eliminado" });
+  try {
+    const id = req.params.id; 
+    await Producto.findByIdAndDelete(id); // O el nombre de tu modelo
+    
+    // REDIRECCIÓN CLAVE: Que vuelva a la lista de servicios
+    res.redirect('/servicios'); 
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error al eliminar");
+  }
 };
 
 exports.formulario = async(req,res) => {

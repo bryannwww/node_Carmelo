@@ -8,6 +8,6 @@ router.get('/servicios', servicioController.consultar);
 router.get('/servicios/:id', servicioController.obtenerPorId);
 router.post('/servicios', servicioController.crear);
 router.put('/servicios/:id', servicioController.actualizar);
-router.delete('/servicios/:id', servicioController.eliminar);
+router.get('/servicios/eliminar/:id', servicioController.eliminar);
 
 module.exports=router;
